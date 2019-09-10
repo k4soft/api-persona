@@ -10,4 +10,8 @@ public interface PersonaService  {
     void insert(Persona persona);
 
     Persona findById(Long id);
+
+    void update(Persona persona);
+
+    void deleteById(Long id);
 }

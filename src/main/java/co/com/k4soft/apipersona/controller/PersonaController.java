@@ -30,4 +30,15 @@ public class PersonaController {
         return personaService.findById(id);
     }
 
+    @PutMapping("/{id}/persona")
+    public void update(@RequestBody Persona persona, @PathVariable Long id){
+         persona.setId(id);
+         personaService.update(persona);
+    }
+
+    @DeleteMapping("/{id}/persona")
+    public void delete(@PathVariable Long id){
+        personaService.deleteById(id);
+    }
+
 }

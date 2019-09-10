@@ -19,4 +19,15 @@ public class Persona {
     private String apellido;
     @Column(name = "telefono")
     private String telefono;
+    @ManyToOne
+    @JoinColumn(name="id_tipo_documento_identidad")
+    private TipoDocumento tipoDocumento;
+
+    public TipoDocumento getTipoDocumento()
+    {
+        if(tipoDocumento == null){
+            tipoDocumento = new TipoDocumento();
+        }
+        return  tipoDocumento;
+    }
 }
