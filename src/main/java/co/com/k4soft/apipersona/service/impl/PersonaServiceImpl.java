@@ -26,7 +26,7 @@ public class PersonaServiceImpl implements PersonaService {
 
     @Override
     public void insert(Persona persona) {
-        persona.setTipoDocumento(tipoDocumentoRepository.findById(persona.getTipoDocumento().getId()).orElse(null));
+        persona.setTipoDocumento(tipoDocumentoRepository.findById(1).orElse(null));
         personaRepository.save(persona);
     }
 

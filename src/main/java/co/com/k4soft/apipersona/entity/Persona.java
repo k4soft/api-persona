@@ -12,7 +12,7 @@ public class Persona {
     @Id
     @GeneratedValue
     @Column(name="id")
-    private Long id;
+    private long id;
     @Column(name = "nombre")
     private String nombre;
     @Column(name="apellido")
